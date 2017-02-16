@@ -19,7 +19,7 @@ RS485Class::RS485Class(uint8_t rxPin, uint8_t txPin, uint8_t modePin, uint8_t en
 size_t RS485Class::write(uint8_t value) {
 	digitalWrite(_modePin, RS485_MODE_TX);
 	size_t ret = SoftwareSerial::write(value);
-	digitalWrite(_modePin, RS485_MODE_TX);
+	digitalWrite(_modePin, RS485_MODE_RX);
 	return ret;
 }
 
