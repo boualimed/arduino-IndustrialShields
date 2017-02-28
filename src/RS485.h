@@ -35,6 +35,7 @@ class RS485Class : public SoftwareSerial {
 	private:
 		uint8_t _modePin;
 		uint8_t _enPin;
+		bool _txBuff;
 };
 
 #if defined(WITH_RS485)
